@@ -8,13 +8,8 @@ use Symfony\Component\HttpFoundation\Request;
 
 class DefaultController extends Controller
 {
-    /**
-     * @Route("/", name="homepage")
-     */
-    public function indexAction(Request $request)
+    protected function search()
     {
-        if (array_key_exists("treatment", $_GET))
-            return $this->render('default/treatment.html.twig');
 
         $qs = null;
         if (array_key_exists('HTTP_REFERER', $_SERVER)) {
@@ -25,6 +20,22 @@ class DefaultController extends Controller
                 }
             }
         }
+        return ($qs);
+    }
+
+    /**
+     * @Route("/", name="homepage")
+     */
+    public function indexAction(Request $request)
+    {
+
+        $qs = $this->search();
+
+        if (array_key_exists("treatment", $_GET))
+            return $this->render('default/treatment.html.twig', [
+                'search' => $qs
+            ]);
+
         // replace this example code with whatever you need
         return $this->render('default/index.html.twig', [
             'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
@@ -38,4 +49,6 @@ class DefaultController extends Controller
     public function treatmentAction(Request $request)
     {
     }
+
+
 }
