@@ -91,12 +91,15 @@ span.onclick = function() {
 
 window.onload = function() {
     modal.style.display = "block";
-    if(typeof variable === 'undefined')
+    if(typeof search_keywords === 'undefined')
     	readTextFile('data/fatalite.json');
     else if (search_keywords.length==0) 
     	readTextFile('data/fatalite.json');
     else 
-    	readTextFile('data/effet_cortico.json')
+    {
+        readTextFile('data/effet_cortico.json')
+        console.log('salut')
+    }
     data_imprim();
     circle(0);
     
