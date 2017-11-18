@@ -86,10 +86,43 @@
     <li class="nav-item">
         <a href="https://www.doctolib.fr/pneumologue/?" id="search_pneumo" target="_blank" class="nav-link">Pneumologues proches de chez moi</a>
     </li>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <table style="width: 90%">
+                <tr>
+                    <td style="width:85%">
+                        <h2>Question <span id="nquestion">0</span> : </h2>
+                        <h3 id="question"> question question question question </h3>
+                        <section id="reponse">
+                            <button type="button" value=0 class="btn rep btn-default btn-block">Réponse 1</button>
+                            <button type="button" value=1 class="btn rep btn-default btn-block">Réponse 2</button>
+                            <button type="button" value=2 class="btn rep btn-default btn-block">Réponse 3</button>
+                            <button type="button" value=3 class="btn rep btn-default btn-block">Réponse 4</button>
+                        </section>
+                    </td>
+                    <td style="width:20%">
+                        <div id="container" style="margin: 60% 6% 0; width: 200px; height: 200px; position: relative;"></div>
+                        <h6 style="text-align: center; ">Risque d'asthme sévère</h6>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="{{ asset('js/node-progress.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/circle.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/quiz.js') }}"></script>
 {% endblock %}
 
 {% block stylesheets %}
-<style>
 
-</style>
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/quiz.css') }}">
 {% endblock %}

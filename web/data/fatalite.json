@@ -1,0 +1,38 @@
+[
+   {
+    "question": "Vous vous sentez fatigué … ?",
+    "choices": ["Constamment","Rarement","De temps en temps","Jamais"],
+    "points": [20,15,10,0],
+    "next": [1,1,1,1]
+  }, 
+  { 
+    "question": "Dans l'avenir, …",
+      "choices": ["Cela m'angoisse !","Je vis le moment présent sans me projeter","Je planifie les projets qui me font rêver pour avancer"],
+     "points": [20,10,0],
+    "next": [2,2,2]
+  }, 
+  { 
+    "question": "Combien de fois par an vous rendez-vous aux urgences ?",
+    "choices": ["Plus de 2 fois par an","Moins de 2 fois par an","Jamais"],
+    "points": [20,10,0],
+    "next": [3,3,3]
+  },  
+  {
+    "question": "Au cours des 4 dernières semaines, avez-vous présenté des symptômes ... ?",
+    "choices": ["Tout le temps","La plupart du temps","Quelquefois","Rarement","Jamais"],
+    "points": [20,15,10,5,0],
+    "next": [4,4,4,4,4]
+  }, 
+  {
+    "question": "Au cours des 4 dernières semaines,les symptômes vous ont-ils réveillé … ?",
+    "choices": ["4 nuits ou plus par semaine","2 ou 3 nuits par semaine","1 nuit par semaine","1 ou 2 fois en tout","Jamais"],
+    "points": [20,15,10,5,0],
+    "next": [5,5,5,5,5]
+  },
+  {
+    "question": "Au cours des 4 dernières semaines, présentez-vous une limitation de votre activité en raison de votre asthme?",
+    "choices": ["Tout le temps","La plupart du temps","Quelquefois","Rarement","Jamais"],
+    "points": [20,15,10,5,0],
+    "next": [-1,-1,-1,-1,-1]
+  }
+]

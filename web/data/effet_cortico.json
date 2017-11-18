@@ -1,0 +1,38 @@
+[
+   {
+    "question": "Pensez-vous être moins heureux que la plupart des gens ?",
+    "choices": ["Cela dépend des jours" ,"Absolument je ne suis pas doué pour le bonheure" ,"Bien au contraire, mon bon caractère me permet de voir la vie en rose plus qu'elle ne l'ait en réalité"],
+    "points": [20,10,0],
+    "next": [1,1,1]
+  }, 
+  { 
+    "question": "Actuellement vous recevez de la cortisone par voie orale ?",
+    "choices": ["Plus de 3 semaines","Entre 1 et 3 semaines par an","Moins d'une semaine par an","entre 1 et 3 semaines par an"],
+    "points": [20,20,20,0],
+    "next": [2,2,2,3]
+  }, 
+  { 
+    "question": "Depuis que vous êtes sous traitement corticoïdes oraux, avez-vous pris du poids ?",
+    "choices": ["Oui","Non"],
+    "points": [20,0],
+    "next": [3,3]
+  }, 
+  {
+    "question": "Au cours des 4 dernières semaines, avez-vous présenté des symptômes ... ?",
+    "choices": ["Tout le temps","La plupart du temps","Quelquefois","Rarement","Jamais"],
+    "points": [20,15,10,5,0],
+    "next": [4,4,4,4,4]
+  }, 
+  {
+    "question": "Au cours des 4 dernières semaines,les symptômes vous ont-ils réveillé … ?",
+    "choices": ["4 nuits ou plus par semaine","2 ou 3 nuits par semaine","1 nuit par semaine","1 ou 2 fois en tout","Jamais"],
+    "points": [20,15,10,5,0],
+    "next": [5,5,5,5,5]
+  },
+  {
+    "question": "Au cours des 4 dernières semaines, présentez-vous une limitation de votre activité en raison de votre asthme?",
+    "choices": ["Tout le temps","La plupart du temps","Quelquefois","Rarement","Jamais"],
+    "points": [20,15,10,5,0],
+    "next": [-1,-1,-1,-1,-1]
+  }
+]
