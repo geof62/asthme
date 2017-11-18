@@ -16,16 +16,15 @@ class DefaultController extends Controller
         if (array_key_exists("treatment", $_GET))
             return $this->render('default/treatment.html.twig');
 
-        $q = explode('&', $_SERVER['HTTP_REFERER']);
         $qs = null;
-        foreach ( $q as $k => $v)
-        {
-            if (substr($v, 0, strlen("q=")) == "q=")
-            {
-                $qs = explode('+', substr($v, 2));
+        if (array_key_exists('HTTP_REFERER', $_SERVER)) {
+            $q = explode('&', $_SERVER['HTTP_REFERER']);
+            foreach ($q as $k => $v) {
+                if (substr($v, 0, strlen("q=")) == "q=") {
+                    $qs = explode('+', substr($v, 2));
+                }
             }
         }
-
         // replace this example code with whatever you need
         return $this->render('default/index.html.twig', [
             'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,

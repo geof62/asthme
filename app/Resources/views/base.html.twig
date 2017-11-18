@@ -28,6 +28,39 @@
                     <a href="https://www.doctolib.fr/pneumologue/?" id="search_pneumo" target="_blank" class="nav-link">Pneumologues proches de chez moi</a>
                 </li>
 
+                <li class="nav-item">
+                    <a href="#" onclick="share_msg();" class="nav-link"><img src="http://icons.iconarchive.com/icons/paomedia/small-n-flat/1024/social-facebook-icon.png" style="height: 20px;"/> Partager à des amis</a>
+                </li>
+
+                <script>
+                    window.fbAsyncInit = function() {
+                        FB.init({
+                            appId            : '135707220424360',
+                            autoLogAppEvents : true,
+                            xfbml            : true,
+                            version          : 'v2.11'
+                        });
+                    };
+
+                    (function(d, s, id){
+                        var js, fjs = d.getElementsByTagName(s)[0];
+                        if (d.getElementById(id)) {return;}
+                        js = d.createElement(s); js.id = id;
+                        js.src = "https://connect.facebook.net/en_US/sdk.js";
+                        fjs.parentNode.insertBefore(js, fjs);
+                    }(document, 'script', 'facebook-jssdk'));
+
+                    function share_msg()
+                    {
+                        FB.ui({
+                            method: 'send',
+                            link: 'http://asthme.baptiste-mairesse.me/',
+                        });
+                    }
+                </script>
+
+
+
                 <!--
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
@@ -88,7 +121,7 @@
     {% block javascripts %}{% endblock %}
     </body>
 
-    {% if (search && count(search) != 0) %}
+    {% if (search and search|length > 0) %}
 
         <script type="text/javascript">!function(t,e){"use strict";var r=function(t){try{var r=e.head||e.getElementsByTagName("head")[0],a=e.createElement("script");a.setAttribute("type","text/javascript"),a.setAttribute("src",t),r.appendChild(a)}catch(t){}};t.CollectId = "5a0f7e6720b1fbea44b9a688",r("https://s3.amazonaws.com/collectchat/launcher.js")}(window,document);</script>
 
