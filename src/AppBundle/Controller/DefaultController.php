@@ -36,10 +36,40 @@ class DefaultController extends Controller
                 'search' => $qs
             ]);
 
+
+        if (array_key_exists("asthme", $_GET))
+            return $this->render('default/asthme.html.twig', [
+                'search' => $qs
+            ]);
+
+
+        if (array_key_exists("sport", $_GET))
+            return $this->render('default/conseil/sport.html.twig', [
+                'search' => $qs
+            ]);
+
+        if (array_key_exists("dietetique", $_GET))
+            return $this->render('default/conseil/dietetique.html.twig', [
+                'search' => $qs
+            ]);
+
+        if (array_key_exists("vacances", $_GET))
+            return $this->render('default/conseil/vacances.html.twig', [
+                'search' => $qs
+            ]);
+
+        if (array_key_exists("environnement", $_GET))
+            return $this->render('default/conseil/environnement.html.twig', [
+                'search' => $qs
+            ]);
+
+
+
         // replace this example code with whatever you need
         return $this->render('default/index.html.twig', [
             'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
-            'search' => $qs
+            'search' => $qs,
+            'index' => true
         ]);
     }
 

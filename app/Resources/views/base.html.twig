@@ -8,33 +8,49 @@
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     </head>
-    <body>
 
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-        <a class="navbar-brand" href="https://asthme.baptiste-mairesse.me/">AsthmeEtMoi</a>
+    {% if index is defined %}
+    <body style="background-image: url('{{ asset('images/2110.png') }}');
+            background-size: cover;">
+    {% else %}
+        <body>
+    {% endif %}
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" style="background-color: #D60B52 !important;">
+        <a class="navbar-brand" href="app.php" style="background: #D60B52;">Asthmatou</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault" style="background: #D60B52;">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="https://asthme.baptiste-mairesse.me/">Asthme ? <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="?asthme">Asthme sévère<!-- <span class="sr-only">(current)</span>--></a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://asthme.baptiste-mairesse.me/?treatment">Traitements</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="https://asthme.baptiste-mairesse.me/?forum">Forum</a>
+                <li class="nav-item active">
+                    <a class="nav-link" href="?treatment">Traitements</a>
                 </li>
 
-                <li class="nav-item">
-                    <a href="https://www.doctolib.fr/pneumologue/?" id="search_pneumo" target="_blank" class="nav-link">Pneumologues proches de chez moi</a>
+
+                <li class="nav-item dropdown active">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Conseils</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdown01">
+                        <a class="dropdown-item" href="?sport">Activité physique</a>
+                        <a class="dropdown-item" href="?dietetique">Diététique</a>
+                        <a class="dropdown-item" href="?psychologie">Psychologie</a>
+                        <a class="dropdown-item" href="?environnement">Environnement</a>
+                        <a class="dropdown-item" href="?vacances">Ou Partir</a>
+                    </div>
                 </li>
 
+                <li class="nav-item active">
+                    <a class="nav-link" href="?forum">Forum</a>
+                </li>
+
+
+
                 <li class="nav-item">
-                    <a href="#" onclick="share_msg();" class="nav-link"><img src="http://icons.iconarchive.com/icons/paomedia/small-n-flat/1024/social-facebook-icon.png" style="height: 20px;"/> Partager à des amis</a>
+                    <a href="#" onclick="share_msg();" class="nav-link"><img src="{{ asset('images/Facebook.png') }}" style="height: 48px; position: absolute; right: 10px; top: 4px;"/></a>
                 </li>
 
 
@@ -69,16 +85,6 @@
 
 
 
-                <!--
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                    <div class="dropdown-menu" aria-labelledby="dropdown01">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                </li>
-                -->
             </ul>
 
             <!--<form class="form-inline my-2 my-lg-0">
@@ -88,9 +94,10 @@
         </div>
     </nav>
 
-    <main role="main" class="container">
+    <main role="main" class="container" >
 
-        <div class="starter-template">
+
+        <div class="starter-template" >
             <p><br /><br /></p>
             {% block body %}{% endblock %}
         </div>

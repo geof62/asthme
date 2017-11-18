@@ -1,12 +1,91 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Asthme ?</h1>
-    <p>blabla</p>
+
+
+
+    <div style="z-index: 1000;">
+
+    <header style="height: 250px; width: 100%; overflow: hidden; text-align: center;">
+        <img src="{{ asset('images/logofront.png') }}" style="height: 100%;" />
+    </header>
+
+    <style>
+        @font-face {
+            font-family: "Roboto-BoldCondensed";
+            src: local("{{ asset('fonts/Roboto-BoldCondensed.ttf') }}")
+        }
+
+        @font-face {
+            font-family: "Roboto-Condensed";
+            src: local("{{ asset('fonts/Roboto-Condensed.ttf') }}")
+        }
+
+        @font-face {
+            font-family: "Roboto-Regular";
+            src: url("{{ asset('fonts/Roboto-Regular.ttf') }}")
+        }
+
+        .my_btn
+        {
+            background-color: #D60B52;
+            width: 17%;
+            padding: 5px;
+            display: block;
+            float: left;
+            margin-left: 1%;
+            margin-right: 1%;
+            text-align: center;
+            font-size: 1.1em;
+        }
+
+        .my_btn{
+            color: white;
+        }
+    </style>
+
+
+    <section style="width: 100%;">
+        <div style="">
+        <p style="text-align: center; font-family: Roboto-Regular; font-size: 1.1em; margin-top: 20px;">
+            Votre asthme vous pèse au quotidien et impacte votre vie sociale ?<br />
+            Des solutions existent !
+        </p>
+
+            <p style="text-align: center">
+                <img src="{{ asset('images/parlez.png') }}" style="width: 700px;" />
+            </p>
+        </div>
+
+        <nav style="width: 100%; margin-top: 30px;">
+            <div style="">
+                <a href="?asthme" class="my_btn" style="margin-left: 12%;">L'asthme sévère</a>
+                <a href="?treatment"  class="my_btn">Les traitements</a>
+                <a href="?forum"  class="my_btn">Forums d'échanges</a>
+                <a href="?asthme"  class="my_btn" style="margin-right: 12%;">Quelques conseils</a>
+            </div>
+        </nav>
+
+
+    </section>
+
+    </div>
+
+    <p>
+
+    </p>
+    <p>
+    <br/>
+        <br/>
+    </p>
 
     <p>
         <a href="https://asthme.baptiste-mairesse.me/?source=hp&ei=8wkQWra4HsKUaNyBgrgP&q=asthme+prise+de+poids&oq=asthme+prise+de+poids&gs_l=psy-ab.3..0i22i30k1.564.4175.0.4718.22.17.0.0.0.0.469.1713.4j4j2j0j1.11.0....0...1.1.64.psy-ab..11.11.1700.0..0j0i131k1.0.PiDg707wGEA">test recherche google</a>
     </p>
+
+    <li class="nav-item">
+        <a href="https://www.doctolib.fr/pneumologue/?" id="search_pneumo" target="_blank" class="nav-link">Pneumologues proches de chez moi</a>
+    </li>
 {% endblock %}
 
 {% block stylesheets %}
