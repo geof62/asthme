@@ -1,0 +1,129 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+
+    <div id="reponse" >
+    <img class="Bannière"src="images/Banniere_FORUM.png" alt="1">
+
+    <table class="container" width=100% cellpadding=3 cellspacing=1 border=1>
+        <tr>
+            <th class="nom">Auteur</th>
+            <th>Sujet</th>
+            <th>Nombre  réponses</th>
+            <th>Date</th>
+
+        </tr>
+
+
+
+        <td class="nom">Axel
+            <br/>
+            <img class="imges"src="images/tete_1.png" alt="1">
+
+        </td>
+        <td> Bonjour, je m'appelle Axel. Asthmatique depuis petite je ne voyais que mon médecin généraliste. Grâce à ce site, je me suis apperçue que mon asthme était plus grave que je ne le pensais ! Désormais un pneumologue me suit. Je revis !!!
+            <br><br>
+            <a href="?forum_before"><strong>Répondre
+        </td>
+        <td>{{ toto }}<br/>
+            <a href="#">Voir les réponses</a>
+        </td>
+        <td>17/11/2017
+        </td>
+        </tr>
+        <tr>
+            <td class="nom">Camille
+                <br/>
+                <img class="imges" src="images/tete_2.png" alt="2">
+            </td>
+
+            <td>Hello ! Quelqu'un saurait me dire qui est le meilleur pneumologue à Lille ? Merci +++
+                <br><br>
+                <a href="?forum_before"><strong>Répondre
+            </td>
+            <td>3 <br/>
+                <a href="#">Voir les réponses</a>
+            </td>
+            <td>18/11/2017
+            </td>
+        </tr>
+        <tr>
+            <td>Marie
+                <br/>
+                <img class="imges" src="images/tete_3.png" alt="3">
+            </td>
+            <td> Bjr! Je voulais juste dire que ce site est super. Je suis tombée sur un flyer par hasard chez mon médecin et franchement c'est top !
+                <br><br>
+                <a href="?forum_before"><strong>Répondre
+            </td>
+            <td>0<br/>
+                <a href="#">Voir les réponses</a>
+            </td>
+            <td>19/11/2017
+            </td>
+        </tr>
+
+
+
+    </table>
+
+    <p class="rep">
+        <a href="forum.html"><button type="button" class="button">Postez votre sujet</button></a></p>
+    </div>
+{% endblock %}
+
+{% block stylesheets %}
+
+    <style>
+        #reponse table {
+            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        #reponse td,#reponse  th {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        #reponse tr:nth-child(even){background-color: #f2f2f2;}
+
+        #reponse tr:hover {background-color: #ddd;}
+        #reponse th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: center;
+            background-color: #A3195B ;
+            color: white;
+        }
+        #reponse a{
+            text-decoration: none ;
+            color:#D60B52 ;}
+        .button {
+
+            background-color:#D60B52;
+            color:white;
+            border: none;
+            border-radius: 5px;
+            font-style:bold;
+            padding:10px;
+            margin:auto;
+        }
+
+        .rep{
+
+            margin: 0 15% ;
+            width: 60%;
+            padding-top: 10px ;
+            text-align: center;
+        }
+        .nom{
+            font-style:bold;
+            font-family: "";}
+        .imges{width:50px;height:50px;}
+        .Bannière{width: 100%;}
+    </style>
+
+{% endblock %}

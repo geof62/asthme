@@ -63,6 +63,33 @@ class DefaultController extends Controller
                 'search' => $qs
             ]);
 
+        if (array_key_exists("forum_before", $_GET))
+            return $this->render('default/forum.html.twig', [
+                'search' => $qs
+            ]);
+
+
+        if (array_key_exists("forum_reply", $_GET))
+            return $this->render('default/forum_reply.html.twig', [
+                'search' => $qs
+            ]);
+
+        if (array_key_exists("forum", $_GET))
+            return $this->render('default/forum_before.html.twig', [
+                'search' => $qs
+            ]);
+
+        if (array_key_exists("forum_next", $_GET))
+        {
+            $toto = 5;
+            if (array_key_exists('tttt', $_GET))
+                $toto = 6;
+            return $this->render('default/forum_next.html.twig', [
+            'search' => $qs,
+            'toto' => $toto
+        ]);
+        }
+
 
 
         // replace this example code with whatever you need

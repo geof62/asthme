@@ -1,0 +1,78 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <div class="body">
+    <img class="Bannière"src="images/Banniere_FORUM.png" alt="1">
+
+
+    <div class="container">
+        <form action="/action_page.php">
+            <label class="lab">Nom :</label>
+            <input type="text"  name="firstname" placeholder="nom">
+            <label class="lab" for="subject">Sujet :</label>
+            <textarea id="subject" name="subject" placeholder="Veuillez saisir votre sujet" style="height:200px"></textarea>
+
+            <p class="rep"><a href="?forum_next=a&tttt"><button type="button" class="button">Valider</button></a></p>
+        </form>
+    </div>
+
+    </div>
+{% endblock %}
+
+{% block stylesheets %}
+
+
+    <style>
+        input[type=text], select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+        }
+
+
+
+        input[type=submit]:hover {
+            background-color:#878787;
+        }
+
+        .container {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+        .Bannière{width: 100%;
+            padding-bottom:-2px;}
+        .container{width: 70%;
+            padding-left:15%;
+            padding-right:15%;}
+        .button {
+            background-color:#D60B52;
+            color:white;
+            border: none;
+            border-radius: 5px;
+            font-weight:bold;
+            padding:10px;
+        }
+        .rep{
+
+            margin: 0 auto ;
+            width: 50%;
+            padding: 10px ;
+            text-align: center;
+        }
+        .lab{
+            font-weight:bold;
+            font-family:"Verdana";
+            color:#A3195B ;
+        }
+
+
+    </style>
+
+{% endblock %}
