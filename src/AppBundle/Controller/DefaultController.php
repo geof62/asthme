@@ -13,6 +13,9 @@ class DefaultController extends Controller
      */
     public function indexAction(Request $request)
     {
+        if (array_key_exists("treatment", $_GET))
+            return $this->render('default/treatment.html.twig');
+
         $q = explode('&', $_SERVER['HTTP_REFERER']);
         $qs = null;
         foreach ( $q as $k => $v)
@@ -35,6 +38,5 @@ class DefaultController extends Controller
      */
     public function treatmentAction(Request $request)
     {
-        return $this->render('default/treatment.html.twig');
     }
 }
