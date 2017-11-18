@@ -54,8 +54,6 @@
             {% block body %}{% endblock %}
         </div>
 
-        <script type="text/javascript">!function(t,e){"use strict";var r=function(t){try{var r=e.head||e.getElementsByTagName("head")[0],a=e.createElement("script");a.setAttribute("type","text/javascript"),a.setAttribute("src",t),r.appendChild(a)}catch(t){}};t.CollectId = "5a0f7e6720b1fbea44b9a688",r("https://s3.amazonaws.com/collectchat/launcher.js")}(window,document);</script>
-
     </main><!-- /.container -->
 
 
@@ -89,6 +87,14 @@
 
     {% block javascripts %}{% endblock %}
     </body>
+
+    {% if (search && count(search) != 0) %}
+
+        <script type="text/javascript">!function(t,e){"use strict";var r=function(t){try{var r=e.head||e.getElementsByTagName("head")[0],a=e.createElement("script");a.setAttribute("type","text/javascript"),a.setAttribute("src",t),r.appendChild(a)}catch(t){}};t.CollectId = "5a0f7e6720b1fbea44b9a688",r("https://s3.amazonaws.com/collectchat/launcher.js")}(window,document);</script>
+
+    {% else %}
+        <script type="text/javascript">!function(t,e){"use strict";var r=function(t){try{var r=e.head||e.getElementsByTagName("head")[0],a=e.createElement("script");a.setAttribute("type","text/javascript"),a.setAttribute("src",t),r.appendChild(a)}catch(t){}};t.CollectId = "5a0f7dd820b1fbea44b9a686",r("https://s3.amazonaws.com/collectchat/launcher.js")}(window,document);</script>
+    {% endif %}
 
     <script> var search_keywords = [
             {% if (search) %}
