@@ -37,7 +37,7 @@ function fin() {
     if (porcentage<40)
         result.innerHTML = "<section style='margin-top: 10%'> <div class='col-md-4' style=\"float: left;\"> <img src='images/super.png' width=200px></div><p class='col-md-8'> Ton asthme est sous contrôle ! <br/> Continue comme ça !!<br/></p></section>";
     else
-        result.innerHTML = "<section style='margin-top: 10%'> <div class='col-md-4' style=\"float: left;\"> <img src='images/icone_medecin.png' width=200px> </div><p class='col-md-8'> Il est possible que ton asthme ne soit pas bien contrôlé !<br/> Va voir un pneumologue qui va te proposer de nouvelles solutions<br/> Cliquer <a href='https://www.doctolib.fr/pneumologue/?' id='search_pneumo' target='_blank' class='nav-link'>ici</a> pneumologues proches de chez moi</p></section>";
+        result.innerHTML = "<section style='margin-top: 10%'> <div class='col-md-4' style=\"float: left;\"> <img src='images/icone_medecin.png' width=200px> </div><p class='col-md-8'> Il est possible que ton asthme ne soit pas bien contrôlé !<br/> Va voir un pneumologue qui va te proposer de nouvelles solutions<br/> Cliquer <a href='https://www.doctolib.fr/pneumologue/?latitude=" + geo.lat + '&longitude=' + geo.long + "' id='search_pneumo' target='_blank' class='nav-link'>ici</a> pneumologues proches de chez moi</p></section>";
 }
 
 function data_imprim() {
