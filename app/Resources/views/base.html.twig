@@ -46,21 +46,32 @@
                 <li class="nav-item active">
                     <a class="nav-link" href="?forum">Forums</a>
                 </li>
-
-                <li class="nav-item">
-                    <a href="#" onclick="share_msg();" class="nav-link"><img src="{{ asset('images/mail.png') }}" style="height: 48px; position: absolute; right: 70px; top: 4px;"/></a>
+            </ul>
+            <ul  class="navbar-nav navbar-right">
+                <li class="nav-item dropdown"  style="height: 48px; ">
+                    <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="{{ asset('images/mail.png') }}" style="height: 50px;"/></a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown01">
+                        <span class="dropdown-item"> <input type="mail" id="mail_send" /> <a href="#" onclick="maill();" id="mail_sendd">Envoyer</a>
+                    </div>
                 </li>
 
 
 
                 <li class="nav-item">
-                    <a href="#" onclick="share_msg();" class="nav-link"><img src="{{ asset('images/facebook.png') }}" style="height: 45px; position: absolute; right: 10px; top: 4px;"/></a>
+                    <a href="#" onclick="share_msg();" class="nav-link"><img src="{{ asset('images/facebook.png') }}" style="height: 48px;"/></a>
                 </li>
 
 
 
 
                 <script>
+                    function maill()
+                    {
+                        document.getElementById('mail_sendd').href = 'mailto:' + document.getElementById('mail_send').value;
+                    }
+
+
+
                     window.fbAsyncInit = function() {
                         FB.init({
                             appId            : '135707220424360',
